@@ -29,7 +29,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/loginUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
@@ -44,17 +44,17 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/loginPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
 
         <Switch
-            android:id="@+id/switch1"
+            android:id="@+id/loginRememberMe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|right"
@@ -62,7 +62,8 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/loginBtn"
+            android:onClick="moveToHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

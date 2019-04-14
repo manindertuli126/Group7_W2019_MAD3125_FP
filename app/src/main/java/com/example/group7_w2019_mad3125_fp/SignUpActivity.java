@@ -3,7 +3,6 @@ package com.example.group7_w2019_mad3125_fp;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,8 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -29,12 +26,13 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("New User Register");
 
         signUser = findViewById(R.id.signUserName);
         signPassword = findViewById(R.id.signPassword);
         signEmail = findViewById(R.id.signEmail);
         signAddress = findViewById(R.id.signAddress);
-        sharedPreferences = getSharedPreferences("signInData",MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("UserData",MODE_PRIVATE);
     }
 
     @Override
@@ -55,7 +53,11 @@ public class SignUpActivity extends AppCompatActivity {
                     if(email.matches(emailPattern)){
                         if(address.length()>5){
                             SharedPreferences.Editor editSignUpData = sharedPreferences.edit();
-                            editSignUpData.putString("username",signUser.getText().toString());
+                            editSignUpData.putString("SignUpUsername",username);
+                            editSignUpData.putString("SignUpPassword",password);
+                            editSignUpData.putString("SignUpEmail",email);
+                            editSignUpData.putString("SignUpAddress",address);
+                            editSignUpData.apply();
                             Intent welcomeIntent = new Intent(SignUpActivity.this,WelcomeActivity.class);
                             startActivity(welcomeIntent);
                         }else{
