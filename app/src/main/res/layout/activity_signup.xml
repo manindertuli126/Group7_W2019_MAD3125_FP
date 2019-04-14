@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
         android:text="Sign Up "
         android:textSize="24sp"
@@ -40,7 +40,7 @@
         android:text="Password :"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usernameEditTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/signUserName" />
 
     <TextView
         android:id="@+id/emailLbl"
@@ -51,7 +51,7 @@
         android:text="E-Mail :"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordEditTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/signPassword" />
 
     <TextView
         android:id="@+id/addressLbl"
@@ -62,10 +62,10 @@
         android:text="Address :"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEditTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/signEmail" />
 
     <EditText
-        android:id="@+id/usernameEditTxt"
+        android:id="@+id/signUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/usernameLbl" />
 
     <EditText
-        android:id="@+id/passwordEditTxt"
+        android:id="@+id/signPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordLbl" />
 
     <EditText
-        android:id="@+id/emailEditTxt"
+        android:id="@+id/signEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailLbl" />
 
     <EditText
-        android:id="@+id/addressEditTxt"
+        android:id="@+id/signAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -128,6 +128,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="40dp"
         android:text="Sign Up"
+        android:onClick="welcomeBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

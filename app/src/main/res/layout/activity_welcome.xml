@@ -11,16 +11,18 @@
     tools:context=".WelcomeActivity">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signupBtn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="Button" />
+        android:onClick="signupBtn"
+        android:text="New User - Sign Up" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/loginBtn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="Button" />
+        android:onClick="loginBtn"
+        android:text="Existing User - Login" />
 </LinearLayout>
