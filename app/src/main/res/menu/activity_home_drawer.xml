@@ -4,34 +4,39 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+
+        <item android:title="Main Menu">
+            <menu>
+                <item
+                    android:id="@+id/nav_productlist"
+                    android:icon="@drawable/ic_menu_gallery"
+                    android:title="Product List" />
+                <item
+                    android:id="@+id/nav_cart"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="My Cart" />
+                <item
+                    android:id="@+id/nav_order"
+                    android:icon="@drawable/ic_action_name"
+                    android:title="My Orders" />
+            </menu>
+        </item>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="More Items">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_profile"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="My Profile" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_aboutus"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Logout" />
         </menu>
     </item>
 

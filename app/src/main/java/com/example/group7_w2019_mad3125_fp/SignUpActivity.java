@@ -52,6 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if(password.length()>6){
                     if(email.matches(emailPattern)){
                         if(address.length()>5){
+                            Toast.makeText(this,"Sign Up successful.",Toast.LENGTH_LONG).show();
                             SharedPreferences.Editor editSignUpData = sharedPreferences.edit();
                             editSignUpData.putString("SignUpUsername",username);
                             editSignUpData.putString("SignUpPassword",password);
