@@ -1,10 +1,8 @@
 package com.example.group7_w2019_mad3125_fp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,11 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Intent logoutintent;
+    private TextView menuUsername;
+    private TextView menuEmail;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +47,18 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View mHeaderView =  navigationView.getHeaderView(0);
+
+        // View
+        menuUsername = (TextView) mHeaderView.findViewById(R.id.menuusername);
+        menuEmail= (TextView) mHeaderView.findViewById(R.id.menuuseremail);
+
+        // Set username & email
+        sharedPreferences = getSharedPreferences("UserData",MODE_PRIVATE);
+        menuUsername.setText(sharedPreferences.getString("SignUpUsername",null));
+        menuEmail.setText(sharedPreferences.getString("SignUpEmail",null));
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
